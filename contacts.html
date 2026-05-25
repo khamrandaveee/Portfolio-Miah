@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Contact Khamram Dave B. Miah. Reach out for web development, video editing, or computer technical service opportunities.">
+        <title>Contact Me | Khamram Dave B. Miah</title>
+        <link rel="icon" type="image/x-icon" href="materials/logo.png">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <!-- Header / Navigation -->
+        <header class="nav-bar">
+            <div class="logo-container">
+                <a href="index.html">
+                    <img id="logo2" src="materials/logo.png" alt="Khamram Dave B. Miah Logo">
+                </a>
+            </div>
+            <div class="button-container1"> 
+                <a href="index.html">
+                    <button class="button2" id="navHome"><b>Home</b></button>
+                </a>
+                <a href="about_me.html">
+                    <button class="button2" id="navAbout"><b>About Me</b></button>
+                </a>
+                <a href="myWorks.html">
+                    <button class="button2" id="navWorks"><b>My Works</b></button>
+                </a>
+                <a href="contacts.html">
+                    <button class="button2 active" id="navContacts"><b>Contacts</b></button>
+                </a>
+            </div>
+        </header>
+
+        <!-- Contacts Section -->
+        <main class="card-about">
+            <div class="card2">
+                <!-- Column 1: Info Grid -->
+                <div class="contact-details">
+                    <h1 id="h3contacts">Get in <span>Touch</span></h1>
+                    <p>Have an internship opening, a freelance project, or a technical inquiry? Send a message or reach out directly through any of my contact channels.</p>
+                    
+                    <div class="contacts-grid">
+                        <!-- Facebook -->
+                        <a href="https://www.facebook.com/khamran.miah" target="_blank" class="contact-card">
+                            <div class="contact-icon">
+                                <span>FB</span>
+                            </div>
+                            <div class="contact-info">
+                                <span class="contact-label">Facebook</span>
+                                <span class="contact-value">Khamram Hanma</span>
+                            </div>
+                        </a>
+
+                        <!-- Email -->
+                        <a href="mailto:Khamrandaveee@gmail.com" class="contact-card">
+                            <div class="contact-icon">
+                                <span>@</span>
+                            </div>
+                            <div class="contact-info">
+                                <span class="contact-label">Gmail</span>
+                                <span class="contact-value">Khamrandaveee@gmail.com</span>
+                            </div>
+                        </a>
+
+                        <!-- Phone -->
+                        <div class="contact-card">
+                            <div class="contact-icon">
+                                <span>PH</span>
+                            </div>
+                            <div class="contact-info">
+                                <span class="contact-label">Contact Number</span>
+                                <span class="contact-value">+63 912 345 6789</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Column 2: Feedback Form -->
+                <div class="contact-form-container">
+                    <h4>Send a Direct Message</h4>
+                    <form id="contactForm" onsubmit="event.preventDefault(); alert('Thank you! Your mock message was sent successfully.'); this.reset();">
+                        <div class="form-group">
+                            <label for="nameInput">Your Name</label>
+                            <input type="text" id="nameInput" class="form-control" placeholder="John Doe" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="emailInput">Email Address</label>
+                            <input type="email" id="emailInput" class="form-control" placeholder="john.doe@example.com" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="messageInput">Message Description</label>
+                            <textarea id="messageInput" class="form-control" placeholder="Hi Khamram, I would like to invite you for an interview regarding..." required></textarea>
+                        </div>
+
+                        <button type="submit" class="button1" style="width: 100%; margin-top: 10px;">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer>
+            <b>© 2026 KHAMRAM DAVE B. MIAH. ALL RIGHTS RESERVED.</b>
+        </footer>
+    </body>
+</html>
