@@ -1,5 +1,41 @@
 document.addEventListener('DOMContentLoaded', function() {
     
+    /* 0. Responsive Mobile Navigation Menu */
+    const navBar = document.querySelector('.nav-bar');
+    const buttonContainer = document.querySelector('.button-container1');
+    
+    if (navBar && buttonContainer) {
+        const hamburger = document.createElement('button');
+        hamburger.className = 'hamburger-menu';
+        hamburger.setAttribute('aria-label', 'Toggle navigation menu');
+        hamburger.setAttribute('aria-expanded', 'false');
+        
+        for (let i = 0; i < 3; i++) {
+            hamburger.appendChild(document.createElement('span'));
+        }
+        
+        navBar.appendChild(hamburger);
+        
+        hamburger.addEventListener('click', function(e) {
+            e.stopPropagation();
+            const isOpen = buttonContainer.classList.toggle('active');
+            hamburger.classList.toggle('active');
+            hamburger.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+            document.body.classList.toggle('nav-menu-open', isOpen);
+        });
+        
+        document.addEventListener('click', function(e) {
+            if (buttonContainer.classList.contains('active') && 
+                !buttonContainer.contains(e.target) && 
+                !hamburger.contains(e.target)) {
+                buttonContainer.classList.remove('active');
+                hamburger.classList.remove('active');
+                hamburger.setAttribute('aria-expanded', 'false');
+                document.body.classList.remove('nav-menu-open');
+            }
+        });
+    }
+
     /* 1. Skill Progress Bar Animations (for about_me.html) */
     const progressBars = document.querySelectorAll('.skill-progress');
     if (progressBars.length > 0) {
