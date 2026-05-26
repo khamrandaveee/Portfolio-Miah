@@ -984,7 +984,7 @@ body.nav-menu-open {
         display: flex;
         flex-direction: column;
         justify-content: center;
-        align-items: center;
+        align-items: flex-start;
         gap: 15px;
         padding: 40px;
         transform: translateX(100%);
@@ -999,7 +999,7 @@ body.nav-menu-open {
 
     .button-container1 a {
         width: 100%;
-        text-align: center;
+        text-align: left;
         opacity: 0;
         transform: translateY(15px);
         transition: opacity 0.4s ease, transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
@@ -1022,6 +1022,14 @@ body.nav-menu-open {
         padding: 12px 20px;
         display: block;
         border-radius: 8px;
+        text-align: left;
+    }
+
+    .button2.active {
+        color: var(--accent);
+        background-color: rgba(255, 51, 51, 0.08);
+        border-left: 3px solid var(--accent);
+        border-radius: 0 8px 8px 0;
     }
 
     .button2::after {
@@ -1088,6 +1096,10 @@ body.nav-menu-open {
         font-size: 15px;
     }
 
+    .btn-resume {
+        align-self: center !important;
+    }
+
     .profile2 img, .profile3 img {
         max-width: 260px;
         height: 260px;
@@ -1132,6 +1144,22 @@ body.nav-menu-open {
     .filter-btn {
         padding: 8px 16px;
         font-size: 13px;
+        border-radius: 50px;
+    }
+
+    /* Mobile hover overrides to prevent sticky tap states */
+    .item:hover {
+        transform: none !important;
+        box-shadow: var(--shadow-main) !important;
+    }
+
+    .contact-card:hover {
+        transform: none !important;
+        box-shadow: none !important;
+    }
+
+    .button1:hover {
+        transform: none !important;
     }
 
     .container {
